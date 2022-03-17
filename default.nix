@@ -56,6 +56,10 @@ in
     # Networking
     networking.networkmanager.enable = true;
 
+    # Bluetooth
+    hardware.bluetooth.enable = true;
+    services.blueman.enable = true;
+
     # Users / access control
     security.sudo = {
       enable = true;

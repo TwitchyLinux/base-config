@@ -16,6 +16,7 @@ lib.stringAfter [ "users" "groups" ] (
       chown ${username} /home/${username}/.config
       chown ${username} /home/${username}/.config/sway
       chown ${username} /home/${username}/.config/sway/config
+      chmod 0644 /home/${username}/.config/sway/config
     fi
 
     # Create a default nixpkgs config

@@ -9,7 +9,7 @@ in
       enable = true;
       wrapperFeatures.gtk = true;
       extraPackages = with pkgs; [
-        swaylock # lockscreen
+        swaylock-effects # lockscreen
         swayidle # Engage lockscreen after inactivity
         wob # volume popover
         wofi # launch menu

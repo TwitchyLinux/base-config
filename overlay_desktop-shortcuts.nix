@@ -29,9 +29,9 @@ super.stdenv.mkDerivation rec {
     sed -i 's/ICON/camera-web/g'                      $out/share/applications/screenshot-selection.desktop
 
     cp $src $out/share/applications/screenshot-clipboard.desktop
-    sed -i "s/CMD/bash -c 'CMD'/g"                    $out/share/applications/screenshot-clipboard.desktop
-    sed -i 's/CMD/grim -g "$(slurp)" - | wl-copy/g'   $out/share/applications/screenshot-clipboard.desktop
-    sed -i 's/NAME/Screenshot (to clipboard)/g'       $out/share/applications/screenshot-clipboard.desktop
-    sed -i 's/ICON/camera-web/g'                      $out/share/applications/screenshot-clipboard.desktop
+    sed -i "s/CMD/bash -c 'CMD'/g"                                  $out/share/applications/screenshot-clipboard.desktop
+    sed -i 's#CMD#grim -g "$(slurp)" - | wl-copy -t image/png#g'    $out/share/applications/screenshot-clipboard.desktop
+    sed -i 's/NAME/Screenshot (to clipboard)/g'                     $out/share/applications/screenshot-clipboard.desktop
+    sed -i 's/ICON/camera-web/g'                                    $out/share/applications/screenshot-clipboard.desktop
   '';
 }

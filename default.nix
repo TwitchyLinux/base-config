@@ -60,6 +60,9 @@ in
     hardware.bluetooth.enable = true;
     services.blueman.enable = true;
 
+    # Backlight
+    programs.light.enable = true;
+
     # Users / access control
     security.sudo = {
       enable = true;

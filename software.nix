@@ -13,6 +13,7 @@ let
     netcat
     nftables
     dig
+    iw
   ];
   mon-tools = with pkgs; [ htop iotop iftop nload smartmontools ];
 
@@ -27,6 +28,7 @@ let
     diffutils
     binutils
     bintools
+    bc
     procps
     attr
     acl

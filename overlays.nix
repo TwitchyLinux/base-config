@@ -36,4 +36,7 @@ in
   twlinst = import ./overlay_twlinst.nix {
     inherit self super;
   };
+  twl-configurator = import ./overlay_twlconfigurator.nix {
+    inherit self super;
+  };
 }

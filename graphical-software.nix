@@ -36,6 +36,7 @@ in
 
         (lib.mkIf cfg.installer twlinst)
         twl-desktop-shortcuts
+        twl-configurator
         xdg-utils
 
 

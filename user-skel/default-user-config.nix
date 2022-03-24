@@ -19,6 +19,19 @@ lib.stringAfter [ "users" "groups" ] (
       chmod 0644 /home/${username}/.config/sway/config
     fi
 
+    # Make the directory for configurator-generated config
+    if [ ! -d /home/${username}/.config/sway/twl ]; then
+      mkdir -pv /home/${username}/.config/sway/twl
+      chown ${username} /home/${username}/.config/sway/twl
+    fi
+
+    # Make empty configurator config files if they dont exist
+    if [ ! -e /home/${username}/.config/sway/twl/displays ]; then
+      touch ${username} /home/${username}/.config/sway/twl/displays
+      chown ${username} /home/${username}/.config/sway/twl/displays
+      chmod 0644 /home/${username}/.config/sway/twl/displays
+    fi
+
     # Create a default nixpkgs config
     mkdir -pv /home/${username}/.config/nixpkgs
     chown ${username} /home/${username}/.config/nixpkgs

@@ -2,7 +2,7 @@
 
 super.rustPlatform.buildRustPackage rec {
   pname = "twl-configurator";
-  version = "b50db049449e2ff71d002bb0a5bb77d18f45c95b";
+  version = "1daa6a5e121f6220c7ab0f12ff499854988635ed";
 
   nativeBuildInputs = [ super.pkg-config ];
   buildInputs = [ super.gtk3 ];
@@ -11,10 +11,10 @@ super.rustPlatform.buildRustPackage rec {
     owner = "twitchylinux";
     repo = "configurator";
     rev = version;
-    sha256 = "1rpanwvq86mxs84v9h7z8xiv7s7mc8mzg9gfqdi6lvlc8dsi9ayh";
+    sha256 = "1vhrd8ymn737bawg7wxzbvbrmkc5dzlwm32fd1ipwkvmbq6y5c44";
   };
 
-  cargoSha256 = "0b8qj19n9rsbwv13v041hynxkvb15zyd6ynl7g70x0vy2s33a6pn"; # super.lib.fakeSha256;
+  cargoSha256 = "0i4y8m0q6vkk8x3z3ficph0hgvi5kl8sipnf7xa2gsvnlrwpy5ii"; # super.lib.fakeSha256;
 
   meta = with super.lib; {
     description = "Graphical installer for twitchylinux.";

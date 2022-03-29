@@ -32,7 +32,7 @@ in
         feh
 
         google-chrome
-        gnome3.gnome-calculator
+        gnome.gnome-calculator
 
         (lib.mkIf cfg.installer twlinst)
         twl-desktop-shortcuts
@@ -42,8 +42,8 @@ in
 
         # Defaults / baseline
         gnome-icon-theme
-        gnome3.adwaita-icon-theme
-        gnome3.gnome-themes-extra
+        gnome.adwaita-icon-theme
+        gnome.gnome-themes-extra
       ];
     };
     programs.waybar.enable = false;

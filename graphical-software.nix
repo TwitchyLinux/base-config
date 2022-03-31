@@ -17,7 +17,12 @@ in
         i3status-rust # status bar
         mako # notification daemon
         swaynagmode # action confirmation
-        gammastep
+        (gammastep.overrideAttrs (_: {
+          postInstall = ''
+            rm $out/share/applications/gammastep.desktop
+            rm $out/share/applications/gammastep-indicator.desktop
+          '';
+        }))
 
         # kanshi # hotplug => output changes
 

@@ -19,7 +19,7 @@ The installer will do this automatically, but if you want to use manually:
 
  - [x] Installer needs 'install finished' pane with reboot button
  - [ ] Installer needs to prompt you to connect to the network
- - [ ] gammastep desktop entry needs to be deleted
+ - [x] gammastep desktop entry needs to be deleted
  - [x] nix-env --update automatically
  - [x] nixos-rebuild switch automatically
  - [ ] idlelock + lock on screen close

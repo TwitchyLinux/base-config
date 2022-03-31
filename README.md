@@ -17,7 +17,7 @@ The installer will do this automatically, but if you want to use manually:
 
 #### For 0.2
 
- - [ ] Installer needs 'install finished' pane with reboot button
+ - [x] Installer needs 'install finished' pane with reboot button
  - [ ] Installer needs to prompt you to connect to the network
  - [ ] gammastep desktop entry needs to be deleted
  - [x] nix-env --update automatically

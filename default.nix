@@ -9,6 +9,7 @@ in
     <nixpkgs/nixos/modules/hardware/all-firmware.nix>
 
     ./software.nix
+    ./auto-updates.nix
   ];
 
   options.twl = {
@@ -73,12 +74,5 @@ in
     documentation.man.enable = lib.mkForce true;
     documentation.dev.enable = lib.mkForce true;
     documentation.nixos.enable = lib.mkForce true;
-
-    # Maintenance
-    nix.gc = {
-      automatic = true;
-      options = "--delete-older-than 8d";
-      dates = "Sat,Mon *-*-* 09:00";
-    };
   };
 }

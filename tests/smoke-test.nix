@@ -36,6 +36,8 @@
         assert "xxx:x:1000" in userskel.succeed(
             "cat /etc/passwd | grep xxx"
         )
+
+        userskel.wait_for_file("/etc/systemd/system/nixenv-upgrade.service")
       '';
     }
   )

@@ -28,7 +28,10 @@ in
         options = "--delete-older-than 8d";
         dates = "Sat,Mon *-*-* 09:00";
       };
-      system.autoUpgrade.enable = cfg.auto-update-system;
+      system.autoUpgrade = {
+        enable = cfg.auto-update-system;
+        dates = "Sat,Wed,Fri *-*-* 16:00";
+      };
 
     } // lib.mkIf cfg.auto-update-userinstalls {
       systemd.services.nixenv-upgrade = {

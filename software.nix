@@ -108,6 +108,8 @@ let
     openssl
 
     graphviz
+
+    dstat
   ];
 
   hw-tools = with pkgs; [

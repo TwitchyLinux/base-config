@@ -27,6 +27,11 @@ super.stdenv.mkDerivation rec {
     sed -i 's/NAME/Display settings/g'                $out/share/applications/display-settings.desktop
     sed -i 's/ICON/video-display/g'                   $out/share/applications/display-settings.desktop
 
+    cp $src $out/share/applications/bluetooth-settings.desktop
+    sed -i 's/CMD/configurator bluetooth/g'           $out/share/applications/bluetooth-settings.desktop
+    sed -i 's/NAME/Bluetooth settings/g'              $out/share/applications/bluetooth-settings.desktop
+    sed -i 's/ICON/multimedia-player/g'               $out/share/applications/bluetooth-settings.desktop
+
     cp $src $out/share/applications/screenshot-selection.desktop
     sed -i "s/CMD/bash -c 'CMD'/g"                    $out/share/applications/screenshot-selection.desktop
     sed -i 's/CMD/grim -g "$(slurp)"/g'               $out/share/applications/screenshot-selection.desktop

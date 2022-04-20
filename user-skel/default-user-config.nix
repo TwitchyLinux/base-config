@@ -42,10 +42,10 @@ lib.stringAfter [ "users" "groups" ] (
 
     # Create a default bashrc
     if [ ! -f /home/${username}/.bashrc ]; then
-      echo 'export HISTCONTROL=ignoredups:erasedups  # no duplicate entries' > /home/${username}/.bashrc
+      echo 'export HISTCONTROL=ignoredups:erasedups' > /home/${username}/.bashrc
       echo 'export HISTSIZE=100000' >> /home/${username}/.bashrc
       echo 'export HISTFILESIZE=100000' >> /home/${username}/.bashrc
-      echo 'shopt -s histappend                      # append to history, don't overwrite it' >> /home/${username}/.bashrc
+      echo 'shopt -s histappend' >> /home/${username}/.bashrc
       chown ${username} /home/${username}/.bashrc
     fi
   '' + lib.optionalString autologin

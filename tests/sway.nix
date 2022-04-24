@@ -16,6 +16,10 @@
                 source = ../resources/twitchy_background.png;
                 mode = "0755";
               };
+              "twl-base/resources/sway-default-keybindings.config" = {
+                source = ../resources/sway-default-keybindings.config;
+                mode = "0755";
+              };
             };
           };
 

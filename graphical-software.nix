@@ -1,6 +1,9 @@
 { pkgs, lib, config, ... }:
 let
   cfg = config.twl;
+  lockscreen = pkgs.writeShellScriptBin "lockscreen" ''
+    swaymsg exec '$lock'
+  '';
 
 in
 {
@@ -9,6 +12,7 @@ in
       enable = true;
       wrapperFeatures.gtk = true;
       extraPackages = with pkgs; [
+        lockscreen
         swaylock-effects # lockscreen
         swayidle # Engage lockscreen after inactivity
         wob # volume popover
@@ -43,7 +47,6 @@ in
         twl-desktop-shortcuts
         twl-configurator
         xdg-utils
-
 
         # Defaults / baseline
         gnome-icon-theme

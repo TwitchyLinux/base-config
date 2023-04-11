@@ -22,7 +22,6 @@ in
     # Boot
     boot.loader.grub.enable = false;
     boot.loader.systemd-boot.enable = true;
-    system.autoUpgrade.enable = true;
     boot.postBootCommands = ''
       # On the first boot do some maintenance tasks
       if [ -f /nix-path-registration ]; then

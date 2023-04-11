@@ -22,10 +22,11 @@ in
 
 
   config = {
+      boot.loader.systemd-boot.configurationLimit = 5;
 
       nix.gc = {
         automatic = true;
-        options = "--delete-older-than 8d";
+        options = "--delete-older-than 10d";
         dates = "Sat,Mon *-*-* 09:00";
       };
       system.autoUpgrade = {

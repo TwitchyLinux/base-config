@@ -27,7 +27,7 @@ interval = 4
 
 [[block]]
 block = "time"
-interval = 60
+interval = 2
 format = "%a %d/%m %R"
 
 [[block]]

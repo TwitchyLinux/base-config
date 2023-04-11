@@ -43,10 +43,17 @@ in
         google-chrome
         gnome.gnome-calculator
 
+        signal-desktop
+        transmission
+        openscad
+
         (lib.mkIf cfg.installer twlinst)
         twl-desktop-shortcuts
         twl-configurator
         xdg-utils
+        wev
+
+        qt5.qtwayland
 
         # Defaults / baseline
         gnome-icon-theme

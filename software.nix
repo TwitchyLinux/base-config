@@ -106,10 +106,13 @@ let
     age
     gnupg
     openssl
+    gpgme
 
     graphviz
 
     dstat
+
+    graphicsmagick
   ];
 
   hw-tools = with pkgs; [
@@ -131,6 +134,7 @@ let
     cmake
     patch
     patchelf
+    pkg-config
   ];
 
 in

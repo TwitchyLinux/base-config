@@ -42,10 +42,19 @@ in
 
         google-chrome
         gnome.gnome-calculator
+        wireshark-qt
 
         signal-desktop
         transmission
+
         openscad
+        arduino
+        gqrx
+        kicad
+        rawtherapee
+        prusa-slicer
+        libreoffice
+        inkscape
 
         (lib.mkIf cfg.installer twlinst)
         twl-desktop-shortcuts

@@ -14,6 +14,7 @@ let
     nftables
     dig
     iw
+    conntrack-tools
   ];
   mon-tools = with pkgs; [ htop iotop iftop nload smartmontools ];
 
@@ -113,11 +114,16 @@ let
     dstat
 
     graphicsmagick
+    graphicsmagick-imagemagick-compat
+    ffmpeg
   ];
 
   hw-tools = with pkgs; [
     pciutils
     usbutils
+    hackrf
+    rtl-sdr
+    multimon-ng
   ];
 
   toolchains = with pkgs; [
@@ -135,6 +141,8 @@ let
     patch
     patchelf
     pkg-config
+    arduino-cli
+    ngspice
   ];
 
 in
@@ -145,6 +153,7 @@ in
 
   environment.systemPackages = [
     pkgs.firecracker
+    pkgs.OVMF
     pkgs.udisks
     pkgs.pamixer
   ]

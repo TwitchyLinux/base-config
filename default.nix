@@ -73,5 +73,12 @@ in
     documentation.man.enable = lib.mkForce true;
     documentation.dev.enable = lib.mkForce true;
     documentation.nixos.enable = lib.mkForce true;
+
+
+    # Random extra hardware
+    services.udev.extraRules = ''
+    # Baofeng DMR radio
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE="666"
+    '';
   };
 }
